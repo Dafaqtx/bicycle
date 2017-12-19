@@ -10,10 +10,14 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	csscomb      = require('gulp-csscomb');// Подключаем для красивого css кода
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('app/sass/**/*.sass') // Берем источник
-		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+		.pipe(sass({
+			 includePaths: require('node-normalize-scss').includePaths
+		}).on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
+		.pipe(csscomb())
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
 		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
