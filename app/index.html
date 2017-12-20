@@ -5,6 +5,8 @@
 	<title>Bicycle</title>
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 </head>
 <body>
@@ -103,6 +105,35 @@
 				</div>
 			</div>
 		</div>
+		
+		<div id="twitter" class="twitter">
+			<div class="twitter__slick">
+				<div>
+					<div class="twitter__icon">
+						<img src="img/twitter/twitter-icon.png" alt="Twitter">
+					</div>
+					<div class="twitter__title">AOD New York  @aod  <span class="twitter__time">/  35 min</span></div>
+					<div class="twitter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+					</div>
+				</div>
+				<div>
+					<div class="twitter__icon">
+						<img src="img/twitter/twitter-icon.png" alt="Twitter">
+					</div>
+					<div class="twitter__title">AOD New York  @aod  <span class="twitter__time">/  35 min</span></div>
+					<div class="twitter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+					</div>
+				</div>
+				<div>
+					<div class="twitter__icon">
+						<img src="img/twitter/twitter-icon.png" alt="Twitter">
+					</div>
+					<div class="twitter__title">AOD New York  @aod  <span class="twitter__time">/  35 min</span></div>
+					<div class="twitter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</main>
 
@@ -110,7 +141,21 @@
 	<footer>
 		
 	</footer>
+	
 	<script src="js/libs.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.twitter__slick').slick({
+				speed: 300,
+  				infinite: true,
+  				slidesToShow: 1,
+  				slidesToScroll: 1,
+  				dots: true,
+  				arrows: false
+			});
+		});
+	</script>
 
 </body>
 </html>
