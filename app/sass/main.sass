@@ -1,8 +1,5 @@
 @import "normalize";
 
-body
-	height: 3500px
-
 html, body
 	font-family: 'Lato', sans-serif
 
@@ -215,6 +212,7 @@ html, body
 	margin: auto
 	text-align: center
 	padding-top: 114px
+	padding-bottom: 165px;
 
 	&__icon img
 		max-width: 32px
@@ -259,14 +257,68 @@ html, body
 	background: #fff
 	border: 1px solid #a9afb3 !important
 	
-
 .slick-dots .slick-active button
 	background-color: #a9afb3 !important
 	
-	
-
 .slick-dots li button:before
 	content: '' !important
 	width: 11px !important
 	height: 11px !important
 
+.shop
+	display: flex
+
+	&__left-top
+		display: flex
+
+	&__right-top
+		height: 50%
+
+	&__right-top img
+		height: 100%
+
+	&__left,
+	&__center,
+	&__right
+		width: calc(100%/3)
+
+	&__center
+		display: flex
+
+	&__right-bottom
+		display: flex
+
+	&__left-top img,
+	&__center img,
+	&__right-bottom img
+		width: 50%
+
+	&__left-bottom img,
+	&__right-top img
+		width: 100%
+	
+	&__footer
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 200px
+		background-color: #282f35
+		text-align: center
+		margin-bottom: 600px;
+
+	&__btn
+		text-decoration: none
+		width: 300px
+		color: #fff
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 2.8px
+		border: 1px solid rgba(255, 255, 255, 0.5)
+		display: block
+		padding: 16px 0
+
+		&:hover
+			background-color: #fff
+			color: #282f35
+			transition: all .3s
