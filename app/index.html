@@ -8,15 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<script src="js/common.js"></script>
 </head>
 <body>
 	<header class="header">
 		<nav class="header__list">
 			<li class="header__item">
-				<a class="header__ancore" href="/#about-us">about us</a>
+				<a class="header__ancore" href="#about-us">about us</a>
 			</li>
 			<li class="header__item">
-				<a class="header__ancore" href="/#work">work</a>
+				<a class="header__ancore" href="#work">work</a>
 			</li>
 			<li class="header__item">
 				<a class="header__logo" href="#">
@@ -24,10 +25,10 @@
 				</a>
 			</li>
 			<li class="header__item">
-				<a class="header__ancore" href="/#shop">shop</a>
+				<a class="header__ancore" href="#shop">shop</a>
 			</li>
 			<li class="header__item">
-				<a class="header__ancore" href="/#contact">contact</a>
+				<a class="header__ancore" href="#mailing">contact</a>
 			</li>
 		</nav>
 	</header>
@@ -179,8 +180,25 @@
 	</main>
 
 
-	<footer>
-		
+	<footer class="footer">
+		<div class="footer--container">
+			<address class="footer__address">
+			<div class="footer__city">AOD New York</div>
+			<div class="footer__street">2250 Lexington Avenue </div>
+			<div class="footer__mail">New York, NY 10035  - info@domain.com</div>
+		</address>
+		<div class="footer__social social">
+			<a href="#" class="social__item">
+				<img src="img/footer/twitter.svg" alt="Twitter"
+				></a>
+			<a href="#" class="social__item">
+				<img src="img/footer/facebook.svg" alt="Facebook">
+			</a>
+			<a href="#" class="social__item">
+				<img src="img/footer/pt.svg" alt="Pt">
+			</a>
+		</div>
+		</div>
 	</footer>
 	
 	<script src="js/libs.min.js"></script>
@@ -194,6 +212,15 @@
   				slidesToScroll: 1,
   				dots: true,
   				arrows: false
+			});
+
+			$('a[href^="#"], a[href^="."]').click( function(){
+	    		var scroll_el = $(this).attr('href');
+        		if ($(scroll_el).length != 0) {
+	    			$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 700);
+        		}
+	    		return false;
+    	
 			});
 		});
 	</script>
